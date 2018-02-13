@@ -1,4 +1,4 @@
-msgid "Top Slide"
+msgid "Slide"
 msgstr "トップスライド"
 
 msgid "Dashboard"

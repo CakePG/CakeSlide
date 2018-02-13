@@ -3,7 +3,7 @@ namespace CakePG\CakeSlide\Controller\Component;
 
 use Cake\Controller\Component;
 
-class TopImageListComponent extends Component
+class SlideListComponent extends Component
 {
 
     public function initialize(array $config)
@@ -12,10 +12,10 @@ class TopImageListComponent extends Component
         $this->controler = $this->_registry->getController();
     }
 
-    public function getTopImages($limit = null)
+    public function getSlides($limit = null)
     {
-        $this->controler->loadModel('CakePG/CakeSlide.TopImages');
-        return $this->controler->TopImages->find('all' , [
+        $this->controler->loadModel('CakePG/CakeSlide.Slides');
+        return $this->controler->Slides->find('all' , [
             'order' => ['priority' => 'asc'],
             'limit' => $limit
         ]);

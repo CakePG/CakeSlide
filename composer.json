@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "trycatch-inc\\CakeSlide\\": "src"
+            "CakePG\\CakeSlide\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "trycatch-inc\\CakeSlide\\Test\\": "tests",
+            "CakePG\\CakeSlide\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
     }

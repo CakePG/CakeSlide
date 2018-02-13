@@ -1,19 +1,19 @@
 <?php
   $this->layout = 'admin';
-  $this->assign('title', __d('CakeSlide', 'Top Slide').'並び替え - '.__d('CakeSlide', 'Website Admin Title').' | '.__d('CakeSlide', 'Website Title'));
+  $this->assign('title', __d('CakeSlide', 'Slide').'並び替え - '.__d('CakeSlide', 'Website Admin Title').' | '.__d('CakeSlide', 'Website Title'));
   $this->assign('keywords', '');
   $this->assign('description', '');
 ?>
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="<?= $dashboardPath ?>"><i class="fa fa-home" aria-hidden="true"></i><?= __d('CakeSlide', 'Dashboard') ?></a></li>
-  <li class="breadcrumb-item"><?= $this->Html->link(__d('CakeSlide', 'Top Slide').'一覧', ['action' => 'index']+$this->request->query) ?></li>
-  <li class="breadcrumb-item active" aria-current="page"><?= __d('CakeSlide', 'Top Slide') ?>並び替え</li>
+  <li class="breadcrumb-item"><?= $this->Html->link(__d('CakeSlide', 'Slide').'一覧', ['action' => 'index']+$this->request->query) ?></li>
+  <li class="breadcrumb-item active" aria-current="page"><?= __d('CakeSlide', 'Slide') ?>並び替え</li>
 </ol>
 
 <div class="container">
   <div class="row align-items-end mb-2">
     <div class="col-md">
-      <h2><?= __d('CakeSlide', 'Top Slide') ?>並び替え<hr class="d-none d-md-block"></h2>
+      <h2><?= __d('CakeSlide', 'Slide') ?>並び替え<hr class="d-none d-md-block"></h2>
     </div>
     <div class="col-md-auto">
       <nav class="nav nav-pills nav-fill">
@@ -34,10 +34,10 @@
       </p>
       <ul id="sortList" class="list-group">
         <?php $count = 0; ?>
-        <?php foreach ($topImages as $topImage) : ?>
+        <?php foreach ($slides as $slide) : ?>
           <?php $count += 1; ?>
-          <li data-id="<?= h($topImage->id) ?>" data-no="<?= $count ?>" class="list-group-item">
-            <?= h($topImage->name) ?>
+          <li data-id="<?= h($slide->id) ?>" data-no="<?= $count ?>" class="list-group-item">
+            <?= h($slide->name) ?>
           </li>
         <?php endforeach; ?>
       </ul>

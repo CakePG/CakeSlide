@@ -1,5 +1,5 @@
 <?php
-namespace CakeSlide\Model\Table;
+namespace CakePG\CakeSlide\Model\Table;
 
 use Cake\ORM\Table;
 use Cake\ORM\Query;
@@ -7,13 +7,13 @@ use Cake\Validation\Validator;
 use Cake\Utility\Text;
 use Cake\Core\Configure;
 
-class TopImagesTable extends Table
+class SlidesTable extends Table
 {
     public function initialize(array $config)
     {
         $this->addBehavior('Timestamp');
-        $this->addBehavior('CakeSlide.ImageTransformer');
-        $this->addBehavior('CakeSlide.SortPriority');
+        $this->addBehavior('CakePG/CakeSlide.ImageTransformer');
+        $this->addBehavior('CakePG/CakeSlide.SortPriority');
         $this->addBehavior('Josegonzalez/Upload.Upload', [
             'file' => [
                 'nameCallback' => function(array $data, array $opts) {

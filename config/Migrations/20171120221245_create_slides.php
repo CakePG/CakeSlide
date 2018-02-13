@@ -1,11 +1,11 @@
 <?php
 use Migrations\AbstractMigration;
 
-class CreateTopImages extends AbstractMigration
+class CreateSlides extends AbstractMigration
 {
     public function change()
     {
-        $table = $this->table('top_images');
+        $table = $this->table('slides');
         $table->addColumn('priority', 'integer', [
                 'default' => 0,
                 'null' => false,

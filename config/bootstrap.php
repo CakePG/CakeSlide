@@ -15,3 +15,4 @@ Configure::load('CakePG/CakeSlide.slide');
 collection((array)Configure::read('Slide.config'))->each(function ($file) {
     Configure::load($file);
 });
+Configure::load('CakePG/CakeSlide.const');

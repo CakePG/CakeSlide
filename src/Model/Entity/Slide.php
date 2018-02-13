@@ -2,8 +2,9 @@
 namespace CakePG\CakeSlide\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Core\Configure;
 
-class TopImage extends Entity
+class Slide extends Entity
 {
     protected $_accessible = [
         '*' => true,
@@ -18,5 +19,14 @@ class TopImage extends Entity
     protected function _getAssetUrl()
     {
         return $this->dir ? ASSETS.str_replace(STORAGE, '', $this->dir.$this->file) : null;
+    }
+
+    protected function _getPublishedMsg()
+    {
+        $publishStatus = Configure::read('CakeSlide.published');
+        $limit = Configure::read('CakeSlide.limit');
+        return $this->priority <= $limit ?
+        '<span class="badge badge-success">'.$publishStatus.'</span>' :
+        '';
     }
 }
