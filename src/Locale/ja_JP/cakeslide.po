@@ -1,0 +1,11 @@
+msgid "Top Slide"
+msgstr "トップスライド"
+
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+msgid "Website Admin Title"
+msgstr "ウェブサイト管理"
+
+msgid "Website Title"
+msgstr "ウェブサイト"

@@ -1,0 +1,25 @@
+{
+    "name": "CakePG/CakeSlide",
+    "description": "CakeSlide plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^3.5",
+        "cakedc/users": "^5.2",
+        "josegonzalez/cakephp-upload": "3.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "trycatch-inc\\CakeSlide\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "trycatch-inc\\CakeSlide\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
+}
