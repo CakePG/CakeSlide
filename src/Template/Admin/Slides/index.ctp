@@ -39,7 +39,7 @@
     <tbody>
       <?php foreach ($slides as $slide) : ?>
         <tr>
-          <td class="ids"><?= $slide->priority ?><?= $slide->published_msg ?></td>
+          <td class="ids"><?= $slide->published_msg ?> <?= $slide->priority ?></td>
           <td><?= h($slide->name) ?></td>
           <td class="d-none d-md-table-cell"><?= h($slide->size) ?></td>
           <td class="d-none d-md-table-cell"><?= h($slide->created->format('Y年m月d日')) ?></td>
