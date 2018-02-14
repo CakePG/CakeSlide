@@ -25,7 +25,7 @@ class Slide extends Entity
     {
         $publishStatus = Configure::read('CakeSlide.published');
         $display = Configure::read('CakeSlide.display');
-        return $this->priority <= $display ?
+        return !$display || $this->priority <= $display ?
         '<span class="badge badge-success">'.$publishStatus.'</span>' :
         '';
     }
