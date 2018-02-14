@@ -22,8 +22,8 @@
     </div>
   </div>
 
-  <?php if ($limit): ?>
-    <p>順番に<?= $limit ?>枚までの画像がウェブサイトの<?= __d('CakeSlide', 'Slide') ?>に表示されます</p>
+  <?php if ($display): ?>
+    <p>順番に<?= $display ?>枚までの画像がウェブサイトの<?= __d('CakeSlide', 'Slide') ?>に表示されます</p>
   <?php endif; ?>
 
   <table class="table admin">

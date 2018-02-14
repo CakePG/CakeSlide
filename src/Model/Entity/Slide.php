@@ -24,8 +24,8 @@ class Slide extends Entity
     protected function _getPublishedMsg()
     {
         $publishStatus = Configure::read('CakeSlide.published');
-        $limit = Configure::read('CakeSlide.limit');
-        return $this->priority <= $limit ?
+        $display = Configure::read('CakeSlide.display');
+        return $this->priority <= $display ?
         '<span class="badge badge-success">'.$publishStatus.'</span>' :
         '';
     }

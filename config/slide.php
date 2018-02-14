@@ -4,7 +4,7 @@ use Cake\Core\Configure;
 $config = [
   'CakeSlide' => [
     'dashboard_path' => '/admin',
-    'limit' => 6,
+    'display' => 6,
     'image' => [
       'fixed' => null,  // 固定にする [横, 縦] で指定。（縦と横は数字で必須。指定した場合、他のサイズ調整は無視）
       'maxwidth' => 2000, // より大きい場合小さくする。（maxwidthとmaxheightは片方のみ影響）

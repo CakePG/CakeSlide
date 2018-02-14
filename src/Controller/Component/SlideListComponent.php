@@ -16,10 +16,10 @@ class SlideListComponent extends Component
     public function getSlides()
     {
         $this->controler->loadModel('CakePG/CakeSlide.Slides');
-        $limit = Configure::read('CakeSlide.limit');
+        $display = Configure::read('CakeSlide.display');
         return $this->controler->Slides->find('all' , [
             'order' => ['priority' => 'asc'],
-            'limit' => $limit
+            'limit' => $display
         ]);
     }
 }
