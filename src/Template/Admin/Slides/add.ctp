@@ -31,12 +31,15 @@
       <?php if($imageSetting['fixed']): ?>
         <p>画像は横（<?= $imageSetting['fixed'][0] ?>px） × 縦（<?= $imageSetting['fixed'][1] ?>px）にリサイズされます</p>
       <?php endif; ?>
-      <?= $this->Form->create($slide, ['type' => 'file', 'templates' => 'app_form_bootstrap']); ?>
-      <?php
-        echo $this->Form->control('name', ['label'=>'名前（画像の説明）', 'class'=>'form-control']);
-        echo $this->Form->control('file', ['label'=>__d('CakeSlide', 'Slide').'画像', 'class'=>'form-control', 'type'=>'file']);
-      ?>
-      <?= $this->Form->submit('保存', ['class' => 'btn btn-lg btn-primary btn-block']) ?>
+      <?= $this->Form->create($slide, ['type' => 'file', 'templates' => 'app_form_bootstrap', 'class' => 'form-img-preview']); ?>
+        <?= $this->Form->control('name', ['label'=>'名前（画像の説明）', 'class'=>'form-control']); ?>
+        <?= $this->Form->control('file', ['label'=>__d('CakeSlide', 'Slide').'画像', 'class'=>'form-control', 'type'=>'file', 'id'=>'uploadid1']); ?>
+        <div class="mb-2 row">
+          <div class="offset-md-3 col-md-8">
+            <img class="img-thumbnail d-none" id="uploadid1img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
+          </div>
+        </div>
+        <?= $this->Form->submit('保存', ['class' => 'btn btn-lg btn-primary btn-block']) ?>
       <?= $this->Form->end() ?>
     </div>
   </div>
